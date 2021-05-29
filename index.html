@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Belajar jQuery</title>
+</head>
+
+<body>
+    <h1>How to Show Password using jQuery</h1>
+    <br>
+    <label for="pass">Password</label>
+	<input type="password" id="password">
+	<br>
+	<input type="checkbox" id="show-password">Show Password
+
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#show-password').click(function() {
+                if ($(this).is(':checked')) {
+                    $('#password').attr('type', 'text');
+                } else {
+                    $('#password').attr('type', 'password');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
